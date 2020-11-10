@@ -2,13 +2,13 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from './../../environments/environment';
-import { map, filter, switchMap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Property } from '../models/property.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ListService {
+export class PropertyService {
 
   private readonly HOST_FRONT = 'localhost:4200';
   private readonly PROPERTY_URL = `${environment.apiUrl}/sources`;

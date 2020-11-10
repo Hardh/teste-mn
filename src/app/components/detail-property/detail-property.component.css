@@ -1,0 +1,12 @@
+.img-max {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.img-miniature {
+  max-width: 100px;
+}
+
+.img-expand {
+  max-width: 1000px;
+}

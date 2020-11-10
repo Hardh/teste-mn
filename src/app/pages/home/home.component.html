@@ -1,0 +1,11 @@
+<div class="row justify-content-center">
+  <div class="col-6 container-btn">
+    <img src="https://v.fastcdn.co/t/3854b641/7a7f287a/1558965795-30797501-220x38-logo.png" class="logo" alt="">
+    <button class="btn-spacing" mat-raised-button (click)="showZapList()">Pesquisar em Zap Imóveis</button>
+    <button class="btn-spacing" mat-raised-button (click)="showVivaList()">Pesquisar em VivaReal</button>
+  </div>
+</div>
+<div class="col-12">
+  <app-list-property *ngIf="showZapResults" [companyType]="Company.ZAP" [arrayItens]="arrayZap"></app-list-property>
+  <app-list-property *ngIf="showVivaResults" [companyType]="Company.VIVA" [arrayItens]="arrayViva"></app-list-property>
+</div>
