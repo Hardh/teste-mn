@@ -1,0 +1,39 @@
+.container-btn {
+  padding: 30px 10px;
+  margin: 150px auto;
+  text-align: center;
+}
+
+.logo {
+  width: 220px;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-spacing {
+  margin: 30px 40px;
+}
+
+.item {
+  background: #fff;
+  padding: 40px 0;
+  -webkit-box-shadow: -1px -1px 13px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -1px 13px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px -1px 13px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 20px;
+}
+
+.img-imv {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+}
+
+.text-area {
+  margin-left: 73px;
+  margin-top: 21px;
+}
+
+.btn-page {
+  display: inline-block;
+}
