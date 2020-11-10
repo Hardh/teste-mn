@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { BusinessType } from 'src/app/models/enuns/business-type.enum';
 import { Property } from 'src/app/models/property.model';
 
 @Component({
@@ -11,7 +12,8 @@ export class DetailPropertyComponent implements OnInit {
 
   property: Property;
   imageSelected: string;
-
+  public BusinessType = BusinessType;
+  
   constructor(
     public dialogRef: MatDialogRef<DetailPropertyComponent>,
     @Inject(MAT_DIALOG_DATA) public data
@@ -21,6 +23,9 @@ export class DetailPropertyComponent implements OnInit {
 
   ngOnInit(): void {
     const a = 0;
+    if(this.property.images.length > 0){
+      this.imageSelected = this.property.images[0];
+    }
   }
 
   selectImage(imageSrc: string) {

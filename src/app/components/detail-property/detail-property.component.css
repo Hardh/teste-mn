@@ -5,8 +5,16 @@
 
 .img-miniature {
   max-width: 100px;
+  height: 66px;
 }
 
 .img-expand {
-  max-width: 1000px;
+  max-width: 100%;
+}
+
+.title h2{
+  width: 100%;
+  border-bottom: 1px solid #c3c3c3;
+  font-size: 2rem;
+  padding: 15px 0px;
 }
