@@ -23,7 +23,7 @@ export class DetailPropertyComponent implements OnInit {
 
   ngOnInit(): void {
     const a = 0;
-    if(this.property.images.length > 0){
+    if(this.property && this.property.images && this.property.images.length > 0){
       this.imageSelected = this.property.images[0];
     }
   }
