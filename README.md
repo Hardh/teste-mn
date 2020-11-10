@@ -7,7 +7,7 @@ Run `npm i`
 Run `ng serve` 
 
 ## Testes
-Run `ng serve` 
+Run `ng test` 
 
 ## Deploy
 * Build a docker image `docker build -t eng-zap-challenge-javascript-image .` 
