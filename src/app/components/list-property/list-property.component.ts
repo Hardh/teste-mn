@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Company } from 'src/app/models/enuns/company.enum';
 import { Property } from 'src/app/models/property.model';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DetailPropertyComponent } from '../detail-property/detail-property.component';
 
 @Component({
   selector: 'app-list-property',
@@ -17,6 +19,8 @@ export class ListPropertyComponent implements OnInit {
   public apresentationArray = [];
 
   public numberOfPages = [];
+
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.calculateArrayOfPages();
@@ -50,8 +54,20 @@ export class ListPropertyComponent implements OnInit {
   }
 
   goToPage(pageNumber: number) {
+    this.apresentationArray = [];
     const positionInit = ((pageNumber - 1) * this.PAGE_SIZE);
     const positionFinal = (positionInit + this.PAGE_SIZE);
     this.apresentationArray = this.arrayItens.slice(positionInit, positionFinal);
+  }
+
+  openDialog(property: Property) {
+    const dialogRef = this.dialog.open(DetailPropertyComponent, {
+      width: '1200px',
+      data: { property }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }

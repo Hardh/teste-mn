@@ -10,19 +10,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListPropertyComponent } from './components/list-property/list-property.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DetailPropertyComponent } from './components/detail-property/detail-property.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListPropertyComponent,
-    HomeComponent
+    HomeComponent,
+    DetailPropertyComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   exports: [
     CommonModule,

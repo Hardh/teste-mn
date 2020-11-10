@@ -1,0 +1,10 @@
+<div>
+  <div class="img-max" *ngFor="let image of property.images">
+    <div (click)="selectImage(image)">
+      <img class="img-miniature" [src]="image" alt="">
+    </div>
+  </div>
+</div>
+<div *ngIf="imageSelected" class="img-expand">
+  <img class="img-expand" [src]="imageSelected" alt="">
+</div>

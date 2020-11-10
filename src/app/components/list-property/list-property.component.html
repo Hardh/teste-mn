@@ -4,31 +4,20 @@
   </div>
 </div>
 
-<div class="list row">
-  <div *ngFor="let item of apresentationArray; let i = index">
-    <div class="col-4">
-      <div class="item">
-        <div class="image">
-          <img class="img-imv" [src]="item.images[0]" alt="">
-        </div>
-        <div class="text-area">
-          <h1 class="title">Apartamento para VV</h1>
-          <p>2 quartos | 1 banheiros | 55 m2 | 1 vagas</p>
-          <p>Valor: R$ 425000</p>
-        </div>
+<div class="row">
+  <div class="col-12" *ngFor="let item of apresentationArray; let i = index">
+
+    <!-- DETALHE -->
+    <button mat-raised-button (click)="openDialog(item)">Detalhe</button>
+
+    <div class="item">
+      <div class="image">
+        <img class="img-imv" [src]="item.images[0]" alt="">
       </div>
-    </div>
-    <div class="col-4">
-      <div class="item">
-        <div class="image">
-          <img class="img-imv" src="http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic19.jpg"
-            alt="">
-        </div>
-        <div class="text-area">
-          <h1 class="title">Teste imovel</h1>
-          <p>2 quartos | 1 banheiros | 55 m2 | 1 vagas</p>
-          <p>Valor: R$ 425000</p>
-        </div>
+      <div class="text-area">
+        <h1 class="title">Apartamento para VV</h1>
+        <p>2 quartos | 1 banheiros | 55 m2 | 1 vagas</p>
+        <p>Valor: R$ 425000</p>
       </div>
     </div>
   </div>
