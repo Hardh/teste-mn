@@ -1,5 +1,5 @@
 <div>
-  <div class="img-max" *ngFor="let image of property.images">
+  <div class="img-max" *ngFor="let image of property?.images">
     <div (click)="selectImage(image)">
       <img class="img-miniature" [src]="image" alt="">
     </div>
